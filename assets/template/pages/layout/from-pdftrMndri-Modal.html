@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pendaftaran Mandiri RSRR</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../../dist/img/Logo/favicon.ico">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../../plugins/iCheck/all.css">
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  <!-- Bootstrap time Picker -->
+  <link rel="stylesheet" href="../../plugins/timepicker/bootstrap-timepicker.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <style>
+    .example-modal .modal {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      right: auto;
+      left: auto;
+      display: block;
+      z-index: 1;
+    }
+
+    .example-modal .modal {
+      background: transparent !important;
+    }
+  </style>
+
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+
+<body class="hold-transition skin-blue layout-top-nav">
+  <div class="wrapper">
+
+    <!-- Full Width Column -->
+    <div class="content-wrapper">
+      <br><br>
+      <div class="container">
+        <div class="pull-left image">
+          <img src="../../dist/img/logo/rrkrasnobg.png" class="no-margin" style="width: 85px; height: 80px;"
+            alt="User Image">
+        </div>
+        <span class="logo-lg">
+          <h1> Pendaftaran Mandiri <b>RS. Rahman Rahim</b></h1>
+        </span>
+        <br>
+        <div class="callout callout-danger">
+          <h4>Perhatian</h4>
+          <p>Pendaftaran Mandiri hanya tersedia bagi pasien <b>RS. Rahman Rahim</b> yang sudah pernah berobat</p>
+        </div>
+
+        <!-- button pelayanan -->
+        <div class="row">
+          <div class="col-md-12">
+            <h3> Pilih Pelayanan :</h3>
+            <div class="text-center btn btn-info btn-lg" data-toggle="modal" data-target="#modal-polianak"
+              style="width: 177px; margin-right: 10px;"> Poli Anak</div>
+            <div class="text-center btn btn-info btn-lg" data-toggle="modal" data-target="#modal-polikandungan"
+              style="width: 177px; margin-right: 10px;"> Poli Kandungan
+            </div>
+            <div class="text-center btn btn-info btn-lg" data-toggle="modal" data-target="#modal-polipenyakitdlm"
+              style="width: 177px; margin-right: 10px;"> Poli Penyakit Dalam
+            </div>
+            <div class="text-center btn btn-info btn-lg" data-toggle="modal" data-target="#modal-polibedahumum"
+              style="width: 177px; margin-right: 10px;"> Poli Bedah Umum
+            </div>
+            <div class="text-center btn btn-info btn-lg" data-toggle="modal" data-target="#modal-poliorthopedi"
+              style="width: 177px; margin-right: 10px;"> Poli Orthopedi</div>
+            <div class="text-center btn btn-info btn-lg" data-toggle="modal" data-target="#modal-polijantung"
+              style="width: 177px; margin-right: 10px;"> Poli Jantung</div>
+            <div class="text-center btn btn-info btn-lg" data-toggle="modal" data-target="#modal-polisaraf"
+              style="width: 177px; margin-right: 10px; margin-top: 15px;"> Poli Saraf</div>
+            <div class="text-center btn btn-info btn-lg" data-toggle="modal" data-target="#modal-polimata"
+              style="width: 177px; margin-right: 10px; margin-top: 15px;"> Poli Mata</div>
+            <div class="text-center btn btn-info btn-lg" data-toggle="modal" data-target="#modal-polikonsvgigi"
+              style="width: 177px; margin-right: 10px; margin-top: 15px;"> Poli Konsv. Gigi</div>
+          </div>
+        </div>
+      </div>
+      <!-- end button pelayanan -->
+
+      <!-- modal form poli anak -->
+      <div class="modal fade" id="modal-polianak">
+        <div class="modal-dialog" style="width: 800px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b> ISI DATA PEMERIKSAAN</b></h4>
+              <small><b><i> Pastikan Identitas Anda sudah sesuai</i></b></small>
+            </div>
+            <div class="modal-body">
+              <!-- data pasien -->
+              <h4><b> Data Pasien :</b></h4>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <p> Jenis Kartu</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> KTP</option>
+                      <option> Rekam Medis</option>
+                      <option> BPJS Kesehatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <p> Masukkan No. Kartu</p>
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Ketik/Scan Kartu">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Nama Pasien</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Tgl Lahir</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <p> Alamat</p>
+                    <textarea class="form-control" rows="3" placeholder="Auto" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- end data pasien -->
+
+              <!-- pemeriksaan -->
+              <h4><b> Pelayanan :</b></h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Poli</p>
+                    <input type="text" class="form-control" placeholder="Poli Anak" readonly>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Pilih Dokter</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> dr. Edim Hartati, Sp.A, MARS</option>
+                      <option> dr. Muji Retnaning Rini, Sp.A, M.Kes</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- end pemeriksaan -->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal"> Batal</button>
+                <button type="button" class="btn btn-success"> Daftar</button>
+              </div>
+            </div>
+            <!-- end modal body -->
+          </div>
+          <!-- end modal content -->
+        </div>
+      </div>
+      <!-- end modal form poli anak -->
+
+      <!-- modal form poli kandungan -->
+      <div class="modal fade" id="modal-polikandungan">
+        <div class="modal-dialog" style="width: 800px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b> ISI DATA PEMERIKSAAN</b></h4>
+              <small><b><i> Pastikan Identitas Anda sudah sesuai</i></b></small>
+            </div>
+            <div class="modal-body">
+              <!-- data pasien -->
+              <h4><b> Data Pasien :</b></h4>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <p> Jenis Kartu</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> KTP</option>
+                      <option> Rekam Medis</option>
+                      <option> BPJS Kesehatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <p> Masukkan No. Kartu</p>
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Ketik/Scan Kartu">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Nama Pasien</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Tgl Lahir</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <p> Alamat</p>
+                    <textarea class="form-control" rows="3" placeholder="Auto" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- end data pasien -->
+
+              <!-- pemeriksaan -->
+              <h4><b> Pelayanan :</b></h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Poli</p>
+                    <input type="text" class="form-control" placeholder="Poli Kandungan" readonly>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Pilih Dokter</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> dr. Udjianto, Sp.OG</option>
+                      <option> dr. Hendra Brahmantyo R., Sp.OG</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- end pemeriksaan -->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal"> Batal</button>
+                <button type="button" class="btn btn-success"> Daftar</button>
+              </div>
+            </div>
+            <!-- end modal body -->
+          </div>
+          <!-- end modal content -->
+        </div>
+      </div>
+      <!-- end modal form poli kandungan -->
+
+      <!-- modal form poli penyakit dalam -->
+      <div class="modal fade" id="modal-polipenyakitdlm">
+        <div class="modal-dialog" style="width: 800px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b> ISI DATA PEMERIKSAAN</b></h4>
+              <small><b><i> Pastikan Identitas Anda sudah sesuai</i></b></small>
+            </div>
+            <div class="modal-body">
+              <!-- data pasien -->
+              <h4><b> Data Pasien :</b></h4>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <p> Jenis Kartu</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> KTP</option>
+                      <option> Rekam Medis</option>
+                      <option> BPJS Kesehatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <p> Masukkan No. Kartu</p>
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Ketik/Scan Kartu">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Nama Pasien</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Tgl Lahir</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <p> Alamat</p>
+                    <textarea class="form-control" rows="3" placeholder="Auto" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- end data pasien -->
+
+              <!-- pemeriksaan -->
+              <h4><b> Pelayanan :</b></h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Poli</p>
+                    <input type="text" class="form-control" placeholder="Poli Penyakit Dalam" readonly>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Pilih Dokter</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> dr. Nisvi Andaningrum, Sp.PD</option>
+                      <option> dr. Rizky Amelia, Sp.PD</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- end pemeriksaan -->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal"> Batal</button>
+                <button type="button" class="btn btn-success"> Daftar</button>
+              </div>
+            </div>
+            <!-- end modal body -->
+          </div>
+          <!-- end modal content -->
+        </div>
+      </div>
+      <!-- end modal form poli penyakit dalam -->
+
+      <!-- modal form poli bedah umum -->
+      <div class="modal fade" id="modal-polibedahumum">
+        <div class="modal-dialog" style="width: 800px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b> ISI DATA PEMERIKSAAN</b></h4>
+              <small><b><i> Pastikan Identitas Anda sudah sesuai</i></b></small>
+            </div>
+            <div class="modal-body">
+              <!-- data pasien -->
+              <h4><b> Data Pasien :</b></h4>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <p> Jenis Kartu</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> KTP</option>
+                      <option> Rekam Medis</option>
+                      <option> BPJS Kesehatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <p> Masukkan No. Kartu</p>
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Ketik/Scan Kartu">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Nama Pasien</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Tgl Lahir</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <p> Alamat</p>
+                    <textarea class="form-control" rows="3" placeholder="Auto" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- end data pasien -->
+
+              <!-- pemeriksaan -->
+              <h4><b> Pelayanan :</b></h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Poli</p>
+                    <input type="text" class="form-control" placeholder="Poli Bedah Umum" readonly>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Pilih Dokter</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> dr. Ricky Wibowo, Sp.B</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- end pemeriksaan -->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal"> Batal</button>
+                <button type="button" class="btn btn-success"> Daftar</button>
+              </div>
+            </div>
+            <!-- end modal body -->
+          </div>
+          <!-- end modal content -->
+        </div>
+      </div>
+      <!-- end modal form poli bedah umum -->
+
+      <!-- modal form poli orthopedi -->
+      <div class="modal fade" id="modal-poliorthopedi">
+        <div class="modal-dialog" style="width: 800px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b> ISI DATA PEMERIKSAAN</b></h4>
+              <small><b><i> Pastikan Identitas Anda sudah sesuai</i></b></small>
+            </div>
+            <div class="modal-body">
+              <!-- data pasien -->
+              <h4><b> Data Pasien :</b></h4>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <p> Jenis Kartu</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> KTP</option>
+                      <option> Rekam Medis</option>
+                      <option> BPJS Kesehatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <p> Masukkan No. Kartu</p>
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Ketik/Scan Kartu">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Nama Pasien</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Tgl Lahir</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <p> Alamat</p>
+                    <textarea class="form-control" rows="3" placeholder="Auto" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- end data pasien -->
+
+              <!-- pemeriksaan -->
+              <h4><b> Pelayanan :</b></h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Poli</p>
+                    <input type="text" class="form-control" placeholder="Poli Orthopedi" readonly>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Pilih Dokter</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> dr. Adi Bagus S., Sp.OT</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- end pemeriksaan -->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal"> Batal</button>
+                <button type="button" class="btn btn-success"> Daftar</button>
+              </div>
+            </div>
+            <!-- end modal body -->
+          </div>
+          <!-- end modal content -->
+        </div>
+      </div>
+      <!-- end modal form poli orthopedi -->
+
+      <!-- modal form poli jantung -->
+      <div class="modal fade" id="modal-polijantung">
+        <div class="modal-dialog" style="width: 800px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b> ISI DATA PEMERIKSAAN</b></h4>
+              <small><b><i> Pastikan Identitas Anda sudah sesuai</i></b></small>
+            </div>
+            <div class="modal-body">
+              <!-- data pasien -->
+              <h4><b> Data Pasien :</b></h4>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <p> Jenis Kartu</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> KTP</option>
+                      <option> Rekam Medis</option>
+                      <option> BPJS Kesehatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <p> Masukkan No. Kartu</p>
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Ketik/Scan Kartu">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Nama Pasien</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Tgl Lahir</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <p> Alamat</p>
+                    <textarea class="form-control" rows="3" placeholder="Auto" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- end data pasien -->
+
+              <!-- pemeriksaan -->
+              <h4><b> Pelayanan :</b></h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Poli</p>
+                    <input type="text" class="form-control" placeholder="Poli Jantung" readonly>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Pilih Dokter</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> dr. Ari Rahmawati, Sp.JP</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- end pemeriksaan -->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal"> Batal</button>
+                <button type="button" class="btn btn-success"> Daftar</button>
+              </div>
+            </div>
+            <!-- end modal body -->
+          </div>
+          <!-- end modal content -->
+        </div>
+      </div>
+      <!-- end modal form poli jantung -->
+
+      <!-- modal form poli saraf -->
+      <div class="modal fade" id="modal-polisaraf">
+        <div class="modal-dialog" style="width: 800px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b> ISI DATA PEMERIKSAAN</b></h4>
+              <small><b><i> Pastikan Identitas Anda sudah sesuai</i></b></small>
+            </div>
+            <div class="modal-body">
+              <!-- data pasien -->
+              <h4><b> Data Pasien :</b></h4>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <p> Jenis Kartu</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> KTP</option>
+                      <option> Rekam Medis</option>
+                      <option> BPJS Kesehatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <p> Masukkan No. Kartu</p>
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Ketik/Scan Kartu">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Nama Pasien</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Tgl Lahir</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <p> Alamat</p>
+                    <textarea class="form-control" rows="3" placeholder="Auto" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- end data pasien -->
+
+              <!-- pemeriksaan -->
+              <h4><b> Pelayanan :</b></h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Poli</p>
+                    <input type="text" class="form-control" placeholder="Poli Saraf" readonly>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Pilih Dokter</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> dr. Hidayatullah, Sp.S</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- end pemeriksaan -->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal"> Batal</button>
+                <button type="button" class="btn btn-success"> Daftar</button>
+              </div>
+            </div>
+            <!-- end modal body -->
+          </div>
+          <!-- end modal content -->
+        </div>
+      </div>
+      <!-- end modal form poli saraf -->
+
+      <!-- modal form poli mata -->
+      <div class="modal fade" id="modal-polimata">
+        <div class="modal-dialog" style="width: 800px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b> ISI DATA PEMERIKSAAN</b></h4>
+              <small><b><i> Pastikan Identitas Anda sudah sesuai</i></b></small>
+            </div>
+            <div class="modal-body">
+              <!-- data pasien -->
+              <h4><b> Data Pasien :</b></h4>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <p> Jenis Kartu</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> KTP</option>
+                      <option> Rekam Medis</option>
+                      <option> BPJS Kesehatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <p> Masukkan No. Kartu</p>
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Ketik/Scan Kartu">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Nama Pasien</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Tgl Lahir</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <p> Alamat</p>
+                    <textarea class="form-control" rows="3" placeholder="Auto" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- end data pasien -->
+
+              <!-- pemeriksaan -->
+              <h4><b> Pelayanan :</b></h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Poli</p>
+                    <input type="text" class="form-control" placeholder="Poli Mata" readonly>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Pilih Dokter</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> dr. Maitri Anindita, Sp.M</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- end pemeriksaan -->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal"> Batal</button>
+                <button type="button" class="btn btn-success"> Daftar</button>
+              </div>
+            </div>
+            <!-- end modal body -->
+          </div>
+          <!-- end modal content -->
+        </div>
+      </div>
+      <!-- end modal form poli mata -->
+
+      <!-- modal form poli konv. gigi -->
+      <div class="modal fade" id="modal-polikonsvgigi">
+        <div class="modal-dialog" style="width: 800px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b> ISI DATA PEMERIKSAAN</b></h4>
+              <small><b><i> Pastikan Identitas Anda sudah sesuai</i></b></small>
+            </div>
+            <div class="modal-body">
+              <!-- data pasien -->
+              <h4><b> Data Pasien :</b></h4>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <p> Jenis Kartu</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> KTP</option>
+                      <option> Rekam Medis</option>
+                      <option> BPJS Kesehatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <p> Masukkan No. Kartu</p>
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Ketik/Scan Kartu">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Nama Pasien</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Tgl Lahir</p>
+                    <input type="text" class="form-control" readonly placeholder="Auto">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <p> Alamat</p>
+                    <textarea class="form-control" rows="3" placeholder="Auto" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- end data pasien -->
+
+              <!-- pemeriksaan -->
+              <h4><b> Pelayanan :</b></h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Poli</p>
+                    <input type="text" class="form-control" placeholder="Poli Konsv. Gigi" readonly>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <p> Pilih Dokter</p>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected"> -</option>
+                      <option> drg. Indah Kesuma Dewi, Sp.KG</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- end pemeriksaan -->
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal"> Batal</button>
+                <button type="button" class="btn btn-success"> Daftar</button>
+              </div>
+            </div>
+            <!-- end modal body -->
+          </div>
+          <!-- end modal content -->
+        </div>
+      </div>
+      <!-- end modal form poli konsv. gigi -->
+
+    </div>
+  </div>
+  <!-- /.box -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery 3 -->
+  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- SlimScroll -->
+  <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <!-- FastClick -->
+  <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../../dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../../dist/js/demo.js"></script>
+  <!-- Select2 -->
+  <script src="../../bower_components/select2/dist/js/select2.full.min.js"></script>
+</body>
+
+<script>
+  $(function () {
+    $('.select2').select2()
+  })
+</script>
+
+</html>
